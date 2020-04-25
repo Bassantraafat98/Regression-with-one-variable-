@@ -2,8 +2,6 @@
 # coding: utf-8
 
 # In[17]:
-
-
 import numpy as np 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -11,17 +9,11 @@ import matplotlib.pyplot as plt
 path="E:\\test2\\data.csv"
 data=pd.read_csv(path,header=None,names=["Population","Profit"])
 
-
 # In[18]:
-
-
-
 print (data.head())
 print(data.describe())
 
-
 # In[19]:
-
 
 plt.figure(figsize=(5,5))
 data.plot(kind="scatter",x="Population",y="Profit")
@@ -36,9 +28,7 @@ y=data.iloc[:,cols-1:cols]
 X.head()
 y.head()
 
-
 # In[20]:
-
 
 X=np.matrix(X)
 y=np.matrix(y)
@@ -108,9 +98,6 @@ f=g[0,0]+(g[0,1]*x)
 
 
 # In[34]:
-
-
-
 #draw the line 
 
 fig,ax=plt.subplots(figsize=(5,5))
@@ -130,16 +117,3 @@ ax.plot(np.arange(iters),cost,'r')
 ax.set_xlabel('Iteration')
 ax.set_ylabel('cost')
 ax.set_title('Error vs. training Epoch ')
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
